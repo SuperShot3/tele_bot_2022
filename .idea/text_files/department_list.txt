@@ -1,0 +1,13 @@
+Dermatology
+Eye Center
+Pediatric
+General Medicine
+Orthopaedic
+Surgery
+Gastrointestinal Center
+Heart Center
+Wellness check-up
+Gynecology
+Neurology
+Colorectal Disease Institute
+Dental Center
