@@ -1,3 +1,20 @@
+how to start heroku
+
+Commands:
+pip freeze requirements.txt
+heroku login
+git init
+git add .
+heroku create
+git commit -m 'commit'
+git push heroku master
+
+To run the bot use:
+heroku ps:scale bot=1
+To stop:
+heroku ps:scale bot=0
+
+
 1 Logo can be chagrined
 
 2 add information to insurance as additional button learn more

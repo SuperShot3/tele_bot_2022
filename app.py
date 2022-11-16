@@ -3,11 +3,9 @@ import config
 import markup as nav
 import department_discription
 
-
 bot = Bot(token=config.bot_api)
 dp = Dispatcher(bot)
-
-
+check_up = open('.idea/check_up/heartLogo.jpg', "rb")
 
 @dp.message_handler(commands=['start'])
 async def welcome(message=types.Message):
@@ -27,7 +25,7 @@ async def information(message=types.Message):  # прикрепить клави
 @dp.message_handler(
     commands=['appointment'])  # ReplyKeyboard с направлениями > сохранить ответ > дать контакт и нужно ли записываться
 async def appointment(message=types.Message):
-    await message.answer(text='Please choose speciality: ', reply_markup=nav.keyboard2)
+    await message.answer(text='Please choose from list : ', reply_markup=nav.keyboard2)
 
 
 @dp.message_handler(commands=['insurance'])  # позвонить в страховку и следовать их инструкциям
@@ -75,6 +73,7 @@ async def main_handler(message: types.Message):
         await message.answer(department_discription.dental_cost_text, reply_markup=nav.dental_cost)
     else:
         await message.answer('Please try again something went wrong')
+
 
 
 executor.start_polling(dp)
