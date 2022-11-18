@@ -1,3 +1,8 @@
+This bot was created on 11/16/2022
+
+As test project
+
+
 how to start heroku
 
 Commands:
@@ -20,6 +25,8 @@ heroku ps:scale bot=0
 2 add information to insurance as additional button learn more
 
 3 update information at department with contact information
+
+4 Fulfill help command with contact information and links
 
 to all
 add website link

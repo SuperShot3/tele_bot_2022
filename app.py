@@ -7,10 +7,14 @@ bot = Bot(token=config.bot_api)
 dp = Dispatcher(bot)
 check_up = open('.idea/check_up/heartLogo.jpg', "rb")
 
+
 @dp.message_handler(commands=['start'])
 async def welcome(message=types.Message):
-    await message.answer(
-        department_discription.greeting_message)
+    if message.from_user.username is None:
+        await message.answer('Hi Dear Visitor' + department_discription.greeting_message,parse_mode='HTML')
+    else:
+        await message.answer('Hi ' + message.from_user.username.title() + '👋' +
+                             department_discription.greeting_message, parse_mode='HTML')
 
 
 @dp.message_handler(commands=['information'])
@@ -18,8 +22,8 @@ async def information(message=types.Message):  # прикрепить клави
     await message.answer(text='\nBangkok Hospital Phuket Address: \n'
                               '\n2, 1 Hongyokutis Rd, Tambon Talat Yai,'
                               'Mueang Phuket District, Phuket 83000 \n'
-                              '\nWe speak your language you can call and ask \nTel: 076 254 425, 1719 \n'
-                              '\nE-mail: info@phukethospital.com', reply_markup=nav.keyboard1)
+                              '\nWe speak your language, You can call phone us and ask \nTel: 076 254 425, 1719 \n'
+                              '\nE-mail: info@phukethospital.com', reply_markup=nav.keyboard1,parse_mode='HTML')
 
 
 @dp.message_handler(
@@ -30,14 +34,14 @@ async def appointment(message=types.Message):
 
 @dp.message_handler(commands=['insurance'])  # позвонить в страховку и следовать их инструкциям
 async def insurance(message=types.Message):
-    await message.answer(text=department_discription.insurance_welcome)
-    await message.answer(text=department_discription.documents, reply_markup=nav.keyboard_insurance)
+    await message.answer(text=department_discription.insurance_welcome, parse_mode='HTML')
+    await message.answer(text=department_discription.documents, reply_markup=nav.keyboard_insurance, parse_mode='HTML')
     await message.answer(text='Place your Name and Last name in Email Subject')
 
 
 @dp.message_handler(commands=['help'])
 async def welcome(message=types.Message):
-    await message.answer("Hello this is just second keyboard message to reply!")
+    await message.answer(text=department_discription.help_answer,parse_mode='HTML')
 
 
 @dp.message_handler()
@@ -73,7 +77,6 @@ async def main_handler(message: types.Message):
         await message.answer(department_discription.dental_cost_text, reply_markup=nav.dental_cost)
     else:
         await message.answer('Please try again something went wrong')
-
 
 
 executor.start_polling(dp)
