@@ -1,3 +1,5 @@
+alphabet_eng_rus = 'abcdefghijklmnopqrstuvwxyz абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+
 greeting_message = '\n\n<b>Welcome to @Hospital_assit_bot</b>\n\n' \
                    'Here what I can do:' \
                    '\n/appointment - Department information\n' \
@@ -9,7 +11,7 @@ greeting_message = '\n\n<b>Welcome to @Hospital_assit_bot</b>\n\n' \
 insurance_welcome = '<b>In case if you plan to use insurance to cover your medical expenses</b>\n' \
                     '\n\n1️⃣You have to contact them before come to hospital\n' \
                     '\n\n2️⃣Let them get in touch with international department by placing information that yours\n' \
-                    '\n❗Insurance is valid and can be used❗'  # Can add more information about other hospitals
+                    '\n❗<u><b>Insurance is valid and can be used</b></u>❗'  # Can add more information about other hospitals
 
 documents = '📃<b>You will be ask to provide:</b>\n' \
             '\n\n🛑 Copy of Passport (first page and visa page)\n' \
@@ -17,8 +19,9 @@ documents = '📃<b>You will be ask to provide:</b>\n' \
             '\n🛑 <b>Valid Insurance policy</b>\n'
 
 dermatology_about = 'Dermatology & Cosmetic Center, 2nd floor, is open daily from 8.00 am – 3.00 pm\n' \
-                    'Contact Us Phone: +66 7625 4425 ext. 8519, +66 7636 1000 ext. 8519\n' \
-                    'Most of the time no need to make an appointment before visit'
+                    'https://www.phukethospital.com/center/dermatology/'\
+                    '\n\nContact Us Phone: +66 7625 4425 ext. 8519, +66 7636 1000 ext. 8519\n' \
+                    '\n\nMost of the time no need to make an appointment before visit'
 
 eye_about = "Eye Center, 2nd floor\n " \
             "Is open daily Monday Thursday from 8.00 am to 5.00 pm. Friday – Sunday from 8.00 am to 4.00 pm.\n" \
