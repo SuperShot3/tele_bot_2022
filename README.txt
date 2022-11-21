@@ -8,6 +8,7 @@ how to start heroku
 Commands:
 pip freeze requirements.txt
 heroku login
+
 git init
 git add .
 heroku create
@@ -36,3 +37,25 @@ special
 Wellness center - programs
 
 4 check gmail API can be use free?
+
+
+
+Create forg on github in project
+
+in terminal
+
+git clone <link_from_gitHub>
+
+change directory to directory
+
+git branch <branch_name>
+git checkout <branch_name>
+
+make your addinges
+
+git commit -am 'hi'
+git push --set-upstream origin new_branch
+click on link in terminal and add pull request
+
+
+
